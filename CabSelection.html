@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cab Selection</title>
+</head>
+<body>
+    <form onsubmit="PriceEstimator()">
+    <center>
+        <h3>Cab Type Selection</h3>
+        <label>Select Cab Type:</label><br><br>
+    <select name="cabtype" id="cabtype">
+    <option disabled>Select Cab Type</option>
+    <option Value="AUTO">Auto</option>
+    <option value="MINI">Mini</option>
+    <option Value="PRIME">Prime</option>
+    </select><br><br>
+    <label>Enter Kms:</label><br><br>
+    <input type="number" id="kms" placeholder="Enter KMs" required>
+    <br><br>
+    <button type="submit">Calculate</button>
+    <p id="demo"></p>
+    <p id="gst"></p>
+    <p id="total"></p>
+    <button onclick="window.location.href='Booking.html'">Continue</button>
+    <function call="url"></function>
+    </center>
+</form>
+            
+<script>
+    function PriceEstimator(){
+    event.preventDefault();
+    let cabtype=document.querySelector("#cabtype").value;
+    let kms=document.querySelector("#kms").value;
+    let fare=0;
+    if(cabtype.includes("AUTO")){
+        fare=10*kms;
+    }
+    else if(cabtype.includes("MINI")){
+        fare=15*kms;
+    }
+    else if(cabtype.includes("PRIME")){
+        fare=20*kms;
+    }
+    let gst=fare*0.07;
+    let total=fare+gst;
+    document.getElementById("demo").innerHTML="Base Fare is: Rs. "+ fare;
+    document.getElementById("gst").innerHTML="GST- 7%";
+    document.getElementById("total").innerHTML="Total Fare is: Rs. "+ total;
+    }
+function url(){
+    window.location.href="booking.html?total=" + total;
+}
+</script>
+</body>
+</html>
