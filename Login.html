@@ -1,25 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login Page</title>
-</head>
-<body>
-    <center>
-<h3>Enter Your Credentials</h3>
-<form onsubmit="Login()">
-        <label for="name" >Enter Your Mobile Number :</label><br><br>
-        <input type="number" name="mobile" id="mobile" autocomplete="on" required placeholder="Enter Your Mobile Number" autofocus><br><br>
-        <label for="Password">Enter Your Password   :</label><br><br>
-        <input type="password" name="pass" id="pass" required placeholder="Enter your Password"><br><br>
-        <p id="login" style=color:red ></p>
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
+    <style>
+        body {
+            background-color: black;
+            margin: 0px 0px 0px 0px;
+        }
 
- </form> 
-</center>
-<script src="login.js";> </script>
-</body>
+        h1 {
+
+            color: white;
+            margin: 50px 100px 80px 500px;
+            font-size: 35px;
+
+        }
+
+        div.login {
+            border: solid black;
+            text-align: center;
+            margin: 40px 100px 100px 530px;
+            border-radius: 30px;
+            width: 200px;
+            height: 300px;
+            padding: 50px;
+            background-color: white;
+        }
+
+        div.inputs {
+            font-size: 17px;
+        }
+
+        input {
+            border: solid white;
+            border-radius: 7px;
+            width: 200px;
+            height: 30px;
+        }
+
+        .btn {
+            color:white;
+            width: 80px;
+            font-size: 15px;
+            background-color: black;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<div class="background">
+
+    <body>
+        <h1>Welcome To AGS Cinemas</h1>
+        <div class="login">
+            <h2>Login</h2>
+            <form onsubmit="Login()">
+                <div class="inputs">
+                    <label for="name">Enter Your Mobile Number :</label>
+                </div>
+                <br>
+                <input type="number" name="mobile" id="mobile" autocomplete="on" required placeholder="Enter Your Mobile Number" autofocus>
+                <br>
+                <br>
+                <div class="inputs">
+                    <label for="Password">Enter Your Password :</label>
+                </div>
+                <br>
+                <input type="password" name="pass" id="pass" required placeholder="Enter your Password">
+                <br>
+                <br>
+                <p id="login" style=color:red></p>
+                <button class="btn" type="submit">Submit</button>
+                <button class="btn" type="reset">Reset</button>
+            </form>
+        </div>
+        <script src="login.js" ;> </script>
+    </body>
+</div>
+
 </html>
