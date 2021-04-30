@@ -1,31 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Booking Details</title>
 </head>
+
 <body>
-        <form>
-            <center>
-                <h1>Journey Details</h1>
-                <label>Journey Date :</label>
-                <input type="date" name="Journey Date"id="jdate"><br><br>
-                <label>PickUp Time :</label>
-                <input type="time" name="ptime" id="ptime"><br><br>
-                Senior Citizen :<input type="radio" name="Senior Citizen" id="senior" value="Yes">Yes
-                <input type="radio" name="Senior Citizen" id="senior" value="No">No
-                <br><br>
-                Gender:<input type="radio" name="Gender" value="Male">Male
-                <input type="radio" name="Gender" value="Female">Female
-                <br><br>
-                <p id="total"></p>
-                <button onclick="book()">CONFIRM</button><br>
-                <span id="price"></span>
-                <p id="time"></p>
-                </form>
-            </center>
-            <script src="Booking.js";> </script>
+    <form onsubmit="book()">
+        <center>
+            <h1>Journey Details</h1>
+            <label>Journey Date :</label>
+            <input type="date" name="Journey Date" id="jdate" required>
+            <br>
+            <br>
+            <label>PickUp Time :</label>
+            <input type="time" name="ptime" id="ptime" required>
+            <br>
+            <br> Senior Citizen :
+            <input type="radio" name="Senior Citizen" id="senior" value="Yes" required>Yes
+            <input type="radio" name="Senior Citizen" id="senior" value="No">No
+            <br>
+            <br> Gender:
+            <input type="radio" name="Gender" value="Male" required>Male
+            <input type="radio" name="Gender" value="Female">Female
+            <br>
+            <br>
+            <p id="total"></p>
+            <button type="submit">CONFIRM</button>
+            <br>
+            <span id="price"></span>
+            <p id="time"></p>
+    </form>
+    </center>
+    <script src="Booking.js"> </script>
 </body>
+
 </html>
